@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/qyzp.css" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</head>
+
+	<body>
+		<div id="app" class="mui-text-center">
+        <div class="mui-bar mui-bar-nav">
+            <h1 class="mui-title">职位信息</h1>
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        </div>
+        <div class="mui-container" style="margin-top: 46px">
+            <form name="for1">
+            <div class="mui-input-row">
+                <input type="search" placeholder="请输入职位名称" style="margin-bottom: 0">
+                <lable style='width: 20%'>意向地址</lable>
+                <select style="width: 35%"  name="province" onchange="getdiqu()">
+                    <option value="0">选择</option>
+                    <option value="广州">广州</option>
+                    <option value="深圳">深圳</option>
+                    <option value="珠海">珠海</option>
+                    <option value="东莞">东莞</option>
+                    <option value="江门">江门</option>
+                    <option value="中山">中山</option>
+                    <option value="佛山">佛山</option>
+                    <option value="肇庆">肇庆</option>
+                    <option value="惠州">惠州</option>
+                    <option value="汕头">汕头</option>
+                    <option value="潮州">潮州</option>
+                    <option value="揭阳">揭阳</option>
+                    <option value="汕尾">汕尾</option>
+                    <option value="湛江">湛江</option>
+                    <option value="茂名">茂名</option>
+                    <option value="阳江">阳江</option>
+                    <option value="云浮">云浮</option>
+                    <option value="韶关">韶关</option>
+                    <option value="清远">清远</option>
+                    <option value="梅州">梅州</option>
+                    <option value="河源">河源</option>
+                    <option value="桂林">桂林</option>
+                    <option value="柳州">柳州</option>
+                    <option value="玉林">玉林</option>
+                    <option value="北京">北京</option>
+                    <option value="天津">天津</option>
+                    <option value="上海">上海</option>
+                    <option value="重庆">重庆</option>
+                    <option value="南京">南京</option>
+                    <option value="杭州">杭州</option>
+                    <option value="郑州">郑州</option>
+                    <option value="沈阳">沈阳</option>
+                    <option value="大连">大连</option>
+                    <option value="武汉">武汉</option>
+                    <option value="济南">济南</option><!--断网无法添加，从此开始-->
+                    <option value="青岛">青岛</option>
+                    <option value="昆明">昆明</option>
+                    <option value='福州'>福州</option>
+                    <option value="厦门">厦门</option>
+                    <option value="石家庄">石家庄</option>
+                    <option value="唐山">唐山</option>
+                    <option value="秦皇岛">秦皇岛</option>
+                    <option value="邢台">邢台</option>
+                    <option value="保定">保定</option>
+                    <option value="张家口">张家口</option>
+                    <option value="承德">承德</option>
+                    <option value="沧州">沧州</option>
+                    <option value="廊坊">廊坊</option>
+                    <option value="衡水">衡水</option>
+                    <option value="太原">太原</option>
+                    <option value="大同">大同</option>
+                    <option value="阳泉">阳泉</option>
+                    <option value="长治">长治</option>
+                    <option value="晋城">晋城</option>
+                    <option value="朔州">朔州</option>
+                    <option value="梧州">梧州</option>
+                    <option value='忻州'>忻州</option>
+                    <option value="吕梁">吕梁</option>
+                    <option value="晋中">晋中</option>
+                    <option value="临汾">临汾</option>
+                    <option value="运城">运城</option>
+                    <option value="呼和浩特">呼和浩特</option>
+                    <option value="包头">包头</option>
+                    <option value="乌海">乌海</option>
+                    <option value="赤峰">赤峰</option>
+                    <option value="呼伦贝尔">呼伦贝尔</option>
+                    <option value="兴安盟">兴安盟</option>
+                    <option value="通辽">通辽</option>
+                    <option value="锡林郭勒盟">锡林郭勒盟</option>
+                    <option value="鞍山">鞍山</option>
+                    <option value="抚顺">抚顺</option>
+                    <option value="本溪">本溪</option>
+                    <option value="丹东">丹东</option>
+                    <option value="锦州">锦州</option>
+                    <option value="营口">营口</option>
+                    <option value="阜新">阜新</option>
+                    <option value="辽阳">辽阳</option>
+                    <option value="盘锦">盘锦</option>
+                    <option value="铁岭">铁岭</option>
+                    <option value="朝阳">朝阳</option>
+                    <option value="葫芦岛">葫芦岛</option>
+                    <option value="长春">长春</option>
+                    <option value="吉林">吉林</option>
+                    <option value="四平">四平</option>
+                    <option value="辽源">辽源</option>
+                    <option value="通化">通化</option>
+                    <option value="白山">白山</option>
+                    <option value="松原">松原</option>
+                    <option value="白城">白城</option>
+                    <option value="朝鲜族自治区">朝鲜族自治区</option>
+                    <option value="哈尔滨">哈尔滨</option>
+                    <option value="齐齐哈尔">齐齐哈尔</option>
+                    <option value="鸡西">鸡西</option>
+                    <option value="鹤岗">鹤岗</option>
+                    <option value="双鸭山">双鸭山</option>
+                    <option value="大庆">大庆</option>
+                    <option value="伊春">伊春</option>
+                    <option value="七台河">七台河</option>
+                    <option value="牡丹江">牡丹江</option>
+                    <option value="黑河">黑河</option>
+                    <option value="缕化">缕化</option>
+                    <option value="长兴安岭地区">长兴安岭地区</option>
+                    <option value="无锡">无锡</option>
+                    <option value="徐州">徐州</option>
+                    <option value="常州">常州</option>
+                    <option value="苏州">苏州</option>
+                    <option value="南通">南通</option>
+                    <option value="连云港">连云港</option>
+                    <option value="淮阴">淮阴</option>
+                    <option value="盐城">盐城</option>
+                    <option value="扬州">扬州</option>
+                    <option value="镇江">镇江</option>
+                    <option value="秦州">秦州</option>
+                    <option value="宿迁">宿迁</option>
+                    <option value="宁波">宁波</option>
+                    <option value="温州">温州</option>
+                    <option value="嘉兴">嘉兴</option>
+                    <option value="湖州">湖州</option>
+                    <option value="绍兴">绍兴</option>
+                    <option value="金华">金华</option>
+                    <option value="舟山">舟山</option>
+                    <option value=""></option>
+
+                </select>
+                <select style="width: 35%"  name="city">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-block" style="margin-bottom: 5px;">立即搜索</button>
+            </form>
+            <div>
+                <div class="max">
+                    <div>
+                        <div class="title">
+                        	<b>广州光宝电子有限公司</b>
+                        </div>
+                        <div class="d1"><b>广州市天河区林和西路</b></div>
+                        <div class="d2"><b>普工/技工</b></div>
+                        <div class="d3"><b>薪资：5000-8000元</b></div>
+                        <div class="d4">
+                            <div><b>早班：07：00-19：00</b></div>
+                            <div><b>晚班：19：00-07：00</b></div>
+                        </div>
+                        <div class="d5"><b>包住不包吃，提供吃</b></div>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线申请</button>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线聊天</button>
+                    </div>
+                    <div>
+                        <div class="title">
+                        	<b>广州光宝电子有限公司</b>
+                        </div>
+                        <div class="d1"><b>广州市天河区林和西路</b></div>
+                        <div class="d2"><b>普工/技工</b></div>
+                        <div class="d3"><b>薪资：5000-8000元</b></div>
+                        <div class="d4">
+                            <div><b>早班：07：00-19：00</b></div>
+                            <div><b>晚班：19：00-07：00</b></div>
+                        </div>
+                        <div class="d5"><b>包住不包吃，提供吃</b></div>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线申请</button>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线聊天</button>
+                    </div>
+                    <div>
+                        <div class="title">
+                        	<b>广州光宝电子有限公司</b>
+                        </div>
+                        <div class="d1"><b>广州市天河区林和西路</b></div>
+                        <div class="d2"><b>普工/技工</b></div>
+                        <div class="d3"><b>薪资：5000-8000元</b></div>
+                        <div class="d4">
+                            <div><b>早班：07：00-19：00</b></div>
+                            <div><b>晚班：19：00-07：00</b></div>
+                        </div>
+                        <div class="d5"><b>包住不包吃，提供吃</b></div>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线申请</button>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线聊天</button>
+                    </div>
+                    <div>
+                        <div class="title">
+                        	<b>广州光宝电子有限公司</b>
+                        </div>
+                        <div class="d1"><b>广州市天河区林和西路</b></div>
+                        <div class="d2"><b>普工/技工</b></div>
+                        <div class="d3"><b>薪资：5000-8000元</b></div>
+                        <div class="d4">
+                            <div><b>早班：07：00-19：00</b></div>
+                            <div><b>晚班：19：00-07：00</b></div>
+                        </div>
+                        <div class="d5"><b>包住不包吃，提供吃</b></div>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线申请</button>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">在线聊天</button>
+                    </div>
+                    <div style="width: 100%;">
+                       <hr style="background:gold">
+                    </div>
+                    <div class="tr" style="width: 100%;text-align: center">
+                          <img src="../img/A.jpg" alt="" srcset="">     
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script>
+         var city=[
+            ["白云区","越秀区","天河区","黄埔区","荔湾区","增城区","从化区","海珠区","南沙区","番禺区","花都区"],
+            ["宝安区","福田区","罗湖","南山区","盐田区","龙岗区","光明新区","坪山新区","大鹏新区","龙华区"],
+            ["香洲区","金湾区","斗门区"],
+            ["莞城街道","南城街道","东城街道","万江街道","石龙镇","石排镇","茶山镇","企石镇","桥头镇","东坑镇","横沥镇","常平镇","虎门镇","长安镇",
+            "沙田镇","厚街镇","寮步镇","大岭山镇","大朗镇","黄江镇","樟木头镇","谢岗镇","塘厦镇","清溪镇","凤岗镇","麻涌镇","中堂镇","高埗镇","石碣镇","望牛墩镇","洪梅镇","道滘镇"
+            ],
+            ["蓬江","江海","新会","台山","开平","恩平","鹤山"],
+            ["火炬高技术产业开发区","石岐街道办事处","东区街道办事处","西区街道办事处","西区街道办事处","南区街道办事处","五桂山街道办事处","黄圃镇","南头镇","东凤镇","阜沙镇","小榄镇","东升镇","古镇镇",
+            "横栏镇","三角镇","民众镇","南朗镇","港口镇","大涌镇","沙溪镇","三乡镇","板芙镇","神湾镇","坦洲镇"
+            ],
+            ["禅城区","顺德区","南海区","三水区","高明区"],
+            ["端州区","鼎湖区","高要区","广宁县","怀集县","封开县","德庆县","四会市"],
+            ["惠州市辖惠城区","惠阳区","惠东县","博罗县","龙门县","大亚湾经济技术开发区","仲恺高新技术产业开发区"],
+            ["龙湖区","澄海区","濠江区","潮阳区","潮南区","南澳县"],
+            ["湘桥区","潮安区","饶平县","枫溪区"],
+            ["揭东","揭西","惠来","榕城","东山","渔湖"],
+            ["汕城区","海丰县","陆河县","陆丰市"],
+            ["赤坎区","霞山区","麻章区","坡头区","雷州市","廉江市","吴川市","徐闻县","遂溪县"],
+            ["茂南区","电白区","高州市","信宜市","化州市"],
+            ["江城区","阳东区","阳西县","阳春市","海陵岛经济开发试验区","阳江高新技术产业开发区"],
+            ["云城区","云安区","新兴县","郁南县","罗定市"],
+            ["曲江","浈江","武江","始兴","仁化","翁源","新丰","乳源瑶族自治县","代管乐昌","南雄"],
+            ["清新区","清城区","英德市","阳山县","连山县","连南县","连州市","佛冈县"],
+            ["梅江区","梅县区","平远县","蕉岭县","大埔县","丰顺县","五华县"],
+            ["源城区","东源县","龙川县","紫金县","连平县","和平县"],
+            ['秀峰','叠彩','象山','七星','雁山','临桂','阳朔','灵川','全州','兴安','永福','灌阳','龙胜','资源','平乐','荔浦','恭城'],
+            ['城中区','鱼峰区','柳南区','柳北区','柳江区','柳城县','鹿寨县','融安县','融水苗族自治县','三江侗族自治县','柳州高新技术产业开发区','柳东新区','阳和新区'],
+            ['玉州区','容县','陆川县','博白县','兴业县','北流市'],
+            ['东城区','西城区','朝阳区','丰台区','石景山区','海淀区','顺义区','通州区','大兴区','房山区','门头沟区','昌平区','平谷区','密云区','怀柔区','延庆区'],
+            ['和平区','河东区','河西区','南开区','河北区','红桥区','滨海新区','东丽区','西青区','津南区','北辰区','武清区','宝坻区','静海县','宁河县','蓟县'],
+            ['黄浦区','徐汇区','长宁区','静安区','普陀区','闸北区','虹口区','杨浦区','闵行区','宝山区','嘉定区','浦东新区','金山区','松江区','青浦区','奉贤区','崇明县'],
+            ['万州区','黔江区','涪陵区','渝中区','大渡口区','江北区','沙坪坝区','九龙坡区','南岸区','北碚区','渝北区','巴南区','长寿区','江津区','合川区','永川区','南川区','綦江区','大足区','璧山区','铜梁区','潼南区','荣昌区','开州区','梁平区','武隆区','城口县','丰都县','垫江县','忠县','云阳县','奉节县','巫山县','巫溪县','石柱土家族自治县','秀山土家族苗族自治县','酉阳土家族苗族自治县','彭水苗族土家族自治县'],
+            ['鼓楼区','玄武区','秦淮区','建邺区','栖霞区','雨花台区','江宁区','浦口区','六合区','溧水区','高淳区'],
+            ['上城区','下城区','西湖区','江干区','拱墅区','滨江区','萧山区','余杭区','临安区','富阳区','建德','桐庐','淳安'],
+            ['二七区','中原区','回族管城区','惠济区','金水区','上街区','巩义市','新密市','新郑市','登封市','荥阳市'],
+            ['和平区','沈河区','皇姑区','大东区','铁西区','浑南区','于洪区','沈北新区','苏家屯区','辽中区','新民市','康平县','法库县'],
+            ['西岗区','中山区','沙河口区','甘井子区','旅顺口区','金州区','瓦房店市','普兰店市'],
+            ['江岸','江汉','硚口','汉阳','武昌','青山','洪山',]
+        ];
+         function getdiqu(){
+        //获得城市下拉列表框的对象
+        var sltProvince=document.for1.province;
+        //获得地区下拉列表的对象
+        var sltCity=document.for1.city;
+        //找到对应城市的地区数组
+        var provinceCity=city[sltProvince.selectedIndex-1];
+       //清空地区下拉列表的数据
+       sltCity.length=1;
+       for(var i=0;i<provinceCity.length;i++){
+        sltCity[i+1]=new Option(provinceCity[i],provinceCity[i]);
+       }
+
+      };
+    </script>
+	</body>
+
+</html>

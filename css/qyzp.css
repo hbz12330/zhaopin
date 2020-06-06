@@ -1,0 +1,29 @@
+select{
+    margin-bottom:0;
+}
+.max{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.max>div{
+    width: 47%;
+    margin-bottom:0.5rem;
+    text-align: left;
+}
+
+.max>div>.d1,.max>div>.d3,.max>div>.d4,.max>div>.d5,.max>div>.d2,.max>div>.title{
+    font-family: "微软雅黑";
+    font-size:1rem;
+    color: black;
+}
+.tr{
+    background: peru;
+    position: fixed;
+    bottom: 10px;
+
+}
+.tr>img{
+    border-radius: 50%;
+    margin-top: 5px;
+}

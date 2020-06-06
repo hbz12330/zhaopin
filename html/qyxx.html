@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<style>
+		 .dan{
+		  margin-bottom: 15px;
+		 }
+		.we{
+		width:100% ;
+		 display: flex;
+		 flex-wrap: wrap;
+		     justify-content: space-around
+		}
+		</style>
+	</head>
+
+	<body>
+	<div id="app">
+            <div class="mui-bar mui-bar-nav">
+                <h1 class="mui-title">广州光宝电子有限公司</h1>
+                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            </div> 
+            <div  class="mui-container" style="margin-top: 3rem">
+                <div id="slider" class="mui-slider mui-fullscreen" style="top: 3rem">
+                    <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div class="mui-scroll">
+                            <a class="mui-control-item mui-active" style="padding-right: 0;top: 2px" href="#item1mobile">
+                               	 在招职位
+                            </a>
+                            <input type="button" value="+" id="tj" >
+                            <a class="mui-control-item" href="#item2mobile">
+                                                                                                                部门信息
+                            </a>
+                            <a class="mui-control-item" href="#item3mobile">
+                               	企业信息		                                                                                
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-slider-group">
+                        <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                            <div id="scroll1" class="mui-scroll-wrapper">
+                                <div class="mui-scroll">
+                                    <ul class="mui-table-view">
+                                        <li class="mui-table-view-cell"style="padding: 0;">
+                                            <div class="we">
+                                            	<div class="dan">
+						                        <div class="d1"><b>广州市天河区林和西路</b></div>
+						                        <div class="d2"><b>普工/技工</b></div>
+						                        <div class="d3"><b>薪资：5000-8000元</b></div>
+						                        <div class="d4">
+						                            <div><b>早班：07：00-19：00</b></div>
+						                            <div><b>晚班：19：00-07：00</b></div>
+						                        </div>
+						                        <div class="d5"><b>包住不包吃，提供吃</b></div>
+						                       
+						                    </div>
+						                    <div class="dan">
+						                        <div class="d1"><b>广州市天河区林和西路</b></div>
+						                        <div class="d2"><b>环卫/清洁</b></div>
+						                        <div class="d3"><b>薪资：3000-5000元</b></div>
+						                        <div class="d4">
+						                            <div><b>早班：07：00-19：00</b></div>
+						                            <div><b>晚班：19：00-07：00</b></div>
+						                        </div>
+						                        <div class="d5"><b>包住不包吃，提供吃</b></div>
+						                    </div>
+						                   
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="item2mobile" class="mui-slider-item mui-control-content">
+                            <div class="mui-scroll-wrapper">
+                                <div class="mui-scroll">
+                                    <ul class="mui-table-view">
+                                        <li class="mui-table-view-cell">
+                                            第2个选项卡子项-1
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="item3mobile" class="mui-slider-item mui-control-content">
+                            <div class="mui-scroll-wrapper">
+                                <div class="mui-scroll">
+                                    <ul class="mui-table-view">
+                                        <li class="mui-table-view-cell">
+                                            第3个选项卡子项-1
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                        
+                </div>
+            </div>
+           
+            <nav class="mui-bar mui-bar-tab">
+			    <a class="mui-tab-item mui-active" href="#">
+			                 消息
+			    </a>
+			    <a class="mui-tab-item" href="#">
+			                 兼职
+			    </a>
+			    <a class="mui-tab-item" href="#">
+			                 本地服务
+			    </a>
+			    <a class="mui-tab-item" href="#">
+			                 设置
+			    </a>
+		    </nav> 
+            
+    </div>	
+    <script>
+       document.getElementById('tj').addEventListener('click',function(){
+        window.location.href='fb.html'
+       })
+    </script>
+	</body>
+</html>
